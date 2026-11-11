@@ -1,0 +1,83 @@
+/* Perfiles y Feedback · lo propio de este deck: el perfil de la red social (diapositiva 7, paso 0).
+   El marco usa la paleta «Estudio» de la app (no Halo) para que se lea como la app, no como una lámina. */
+
+
+/* ---------- el perfil, dentro de un navegador ---------- */
+.pa{--e-canvas:#F5F5F7;--e-ink:#1D1D1F;--e-muted:#6A6A70;--e-line:#D2D2D7;--e-acc:#E31B23;--e-acc-soft:#FDECEC;--e-pos:#1F7A3A;
+  background:#fff;border-radius:var(--h-r-xl);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 40px 80px -48px rgba(40,32,90,.55);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI Variable Text","Segoe UI",sans-serif;color:var(--e-ink);letter-spacing:-.006em}
+.pa-barra{flex:none;display:flex;align-items:center;gap:8px;height:46px;padding:0 18px;border-bottom:1px solid var(--e-line);font:500 13px/1 var(--h-f-mono);letter-spacing:.06em;color:var(--e-muted)}
+.pa-barra i{width:11px;height:11px;border-radius:50%;background:#E4E4E8}
+.pa-barra span{margin-left:12px}
+.pa-barra b{margin-left:auto;font-weight:500;color:var(--h-grafito);background:color-mix(in srgb,var(--h-lila) 30%,#fff);padding:7px 11px;border-radius:999px}
+.pa-cuerpo{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:372px 1fr 392px;gap:18px;padding:20px;background:var(--e-canvas)}
+.pa-col{background:#fff;border-radius:20px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);padding:22px;min-width:0;display:flex;flex-direction:column}
+.pa-h{font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--e-muted);margin:0 0 12px}
+
+/* columna 1: la persona */
+.pa-av{position:relative;width:104px;height:104px;flex:none}
+.pa-av .h-orbe{inset:0;width:100%;--bl:7px;--gr:.35;--brillo:.2}
+.pa-av span:not(.h-orbe){position:absolute;inset:0;display:grid;place-items:center;z-index:3;font:300 38px/1 var(--h-f-display);color:#fff;text-shadow:0 1px 12px rgba(50,36,100,.35)}
+.pa-nombre{font-size:34px;font-weight:600;letter-spacing:-.025em;margin:16px 0 2px}
+.pa-rol{font-size:18px;color:var(--e-muted);margin:0}
+.pa-tipos{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+.pa-tipos span{font-size:14px;font-weight:500;padding:6px 11px;border-radius:999px;background:var(--e-canvas)}
+.pa-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.pa-stats div{background:var(--e-canvas);border-radius:14px;padding:12px 14px}
+.pa-stats b{display:block;font-size:34px;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05}
+.pa-stats span{font-size:14px;color:var(--e-muted)}
+.pa-staff{margin-top:auto;border:1.5px dashed var(--e-line);border-radius:14px;padding:12px 14px}
+.pa-staff p{margin:0;font-size:16px;font-weight:500;display:flex;align-items:center;gap:8px}
+.pa-staff p::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--e-pos)}
+.pa-staff small{display:block;font:500 11px/1 var(--h-f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--e-muted);margin-bottom:8px}
+
+/* columna 2: el portafolio */
+.pa-tabs{display:flex;gap:4px;background:var(--e-canvas);border-radius:999px;padding:4px;align-self:flex-start;margin-bottom:16px}
+.pa-tabs span{font-size:15px;font-weight:500;color:var(--e-muted);padding:8px 14px;border-radius:999px;white-space:nowrap}
+.pa-tabs span.on{background:#fff;color:var(--e-ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.pa-tabs em{font-style:normal;color:var(--e-muted);margin-left:4px;font-weight:400}
+.pa-grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px}
+.pa-proy{display:flex;flex-direction:column;min-height:0;border-radius:16px;transition:box-shadow .4s ease,transform .4s ease}
+.pa-proy .h-miniatura{aspect-ratio:auto;flex:1;min-height:0;border-radius:14px}
+.pa-proy .h-miniatura > .h-orbe{width:90%}
+.pa-proy .h-miniatura > .h-dibujo{margin:9% 16% 8%}
+.pa-proy b{display:block;font-size:16px;font-weight:600;margin-top:8px}
+.pa-proy span{display:block;font-size:13.5px;color:var(--e-muted);margin-top:1px}
+.pa-proy.liga{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--e-acc);transform:translateY(-2px)}
+
+/* columna 3: las conexiones */
+.pa-gente{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.pa-gente li{display:flex;align-items:center;gap:12px;padding:7px 8px;border-radius:12px;transition:background .4s ease}
+.pa-gente li.liga{background:var(--e-acc-soft)}
+.pa-mini{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600;color:#fff;flex:none;background:linear-gradient(140deg,var(--a,var(--h-durazno)),var(--b,var(--h-lila)))}
+.pa-gente b{display:block;font-size:16px;font-weight:600}
+.pa-gente span{font-size:13.5px;color:var(--e-muted)}
+.pa-rec{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--e-canvas);display:flex;align-items:center;gap:12px}
+.pa-rec p{margin:0;font-size:14px;color:var(--e-muted);line-height:1.3}
+.pa-rec p b{display:block;color:var(--e-ink);font-size:16px}
+.pa-ref{display:flex;flex-wrap:wrap;gap:6px}
+.pa-ref span{font-size:13.5px;font-weight:500;padding:6px 10px;border-radius:999px;background:var(--e-acc-soft);color:#B0141B}
+.pa-horas{display:flex;flex-direction:column;gap:8px}
+.pa-horas div{display:grid;grid-template-columns:96px 1fr 62px;align-items:center;gap:10px;font-size:14px}
+.pa-horas i{height:8px;border-radius:8px;background:var(--e-canvas);position:relative;overflow:hidden}
+.pa-horas i::after{content:"";position:absolute;inset:0;width:var(--v);border-radius:8px;background:var(--e-acc)}
+.pa-horas em{font-style:normal;text-align:right;color:var(--e-muted);font-variant-numeric:tabular-nums}
+.pa-sep{margin-top:16px}
+
+/* las líneas que relacionan gente con proyectos */
+.pa-lineas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:4}
+.pa-lineas path{fill:none;stroke:#E31B23;stroke-width:2;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;opacity:.75;transition:stroke-dashoffset 1s cubic-bezier(.4,0,.2,1)}
+.pa-lineas path.on{stroke-dashoffset:0}
+.pa-lineas circle{fill:#E31B23;opacity:0;transition:opacity .4s ease .8s}
+.pa-lineas circle.on{opacity:1}
+
+/* entrada escalonada */
+@keyframes pa-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.s.on .pa-anim{animation:pa-in .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--t,0s)}
+
+
+/* diapositiva 7: los orbes quietos (sin el giro del gradiente ni la flotación) */
+#distingue .h-orbe,#distingue .h-orbe::before{animation:none !important}
+
+/* diapositiva 6: el clip es de una app clara; sus franjas laterales, en blanco */
+#demo .pantalla video{background:#fff}
